@@ -1,15 +1,17 @@
 import App from './App.jsx'
 // import ErrorPage from './ErrorPage.jsx'
-// import Store from './Store.jsx'
+import Home from './components/Home.jsx'
+import Store from './components/Store.jsx'
 
 const routes = [
     {
         path: '/',
         element: <App />,
         // errorElement: <ErrorPage />,
-        // children: [
-        //     {path: 'store', element: <Store />},
-        // ],
+        children: [
+            { index: true, element: <Home /> },
+            { path: 'store', element: <Store /> },
+        ],
 
     },
 ]
