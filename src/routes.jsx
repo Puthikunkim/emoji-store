@@ -1,7 +1,7 @@
 import App from './App.jsx'
 // import ErrorPage from './ErrorPage.jsx'
-import Home from './components/Home.jsx'
-import Store from './components/Store.jsx'
+import Home from './components/Home/Home.jsx'
+import Store from './components/Store/Store.jsx'
 
 const routes = [
     {

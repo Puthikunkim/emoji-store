@@ -1,0 +1,14 @@
+.heartContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px;
+}
+.heartNumber {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: black;
+    font-size: 10px;
+}

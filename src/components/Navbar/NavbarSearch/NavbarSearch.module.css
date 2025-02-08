@@ -1,0 +1,40 @@
+.searchContainer {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 12px 18px;
+    width: 250px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.searchContainer:hover {
+    background-color: #e5e5e5;
+}
+
+.searchIcon {
+    font-size: 20px;
+    color: black;
+    margin-right: 8px;
+}
+.searchInput {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    font-weight: 700;
+    font-size: 14px;
+    color: black;
+}
+
+.searchInput::placeholder {
+    color: #b0b0b0; 
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+    font-weight: 700;
+}
+
+/* Make sure the placeholder color changes when hovering */
+.searchContainer:hover .searchInput::placeholder {
+    color: #7a7a7a; 
+}
