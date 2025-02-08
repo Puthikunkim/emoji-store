@@ -1,21 +1,21 @@
 import { useState } from "react";
-import { BsFillBagFill } from "react-icons/bs";
+import { BagSimple } from "@phosphor-icons/react";
 import styles from "./NavbarBag.module.css";
 
 function NavbarBag() {
-  const [isOpen, setIsOpen] = useState(false);
-  const count = 2;
+  const [isClicked, setIsClicked] = useState(false);
+  const count = 3; // Change this to the actual cart count
 
-  const toggleOpen = () => {
-    setIsOpen(!isOpen);
+  const toggleBag = () => {
+    setIsClicked(!isClicked);
   };
 
   return (
-    <div className={styles.bagContainer} onClick={toggleOpen}>
-      <BsFillBagFill 
-        className={styles.bagIcon} 
-        style={{ fill: isOpen ? "black" : "transparent", stroke: "black" }} 
-      />
+    <div className={styles.bagContainer} onClick={toggleBag}>
+      {/* Bag Icon */}
+      <BagSimple size={40} weight={isClicked ? "fill" : "regular"} />
+
+      {/* Counter Number */}
       <span className={styles.bagNumber}>{count}</span>
     </div>
   );

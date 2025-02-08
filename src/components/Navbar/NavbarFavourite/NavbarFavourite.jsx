@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaHeart } from "react-icons/fa";
+import { HeartStraight } from "@phosphor-icons/react";
 import styles from "./NavbarFavourite.module.css";
 
 function NavbarFavourite() {
@@ -11,12 +11,16 @@ function NavbarFavourite() {
   };
 
   return (
-    <>
-      <div className={styles.heartContainer} onClick={toggleFavorite}>
-        <FaHeart style={{ color: isFavorited ? "black" : "transparent", stroke: "black", strokeWidth: "40px" }} />
-        <span className={styles.heartNumber}>{count}</span>
-      </div>
-    </>
+    <div className={styles.heartContainer} onClick={toggleFavorite}>
+      {/* Heart Icon */}
+      <HeartStraight
+        size={40}
+        weight={isFavorited ? "fill" : "regular"}
+      />
+
+      {/* Counter Number */}
+      <span className={styles.heartNumber}>{count}</span>
+    </div>
   );
 }
 

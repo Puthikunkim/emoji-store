@@ -1,24 +1,20 @@
 .bagContainer {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    user-select: none; /* Prevents text selection */
 }
 
-.bagIcon {
-    font-size: 30px;
-    stroke: black;
-    stroke-width: 2px;
-}
-
+/* Number inside bag */
 .bagNumber {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
     color: black;
-    font-size: 10px;
+    user-select: none; /* Prevents text selection */
 }

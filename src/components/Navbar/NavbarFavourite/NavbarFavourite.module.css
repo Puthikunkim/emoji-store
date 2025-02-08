@@ -2,13 +2,19 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
-    font-size: 30px;
+    user-select: none; /* Prevents text selection */
 }
+
+/* Number inside heart */
 .heartNumber {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
     color: black;
-    font-size: 10px;
+    user-select: none; /* Prevents text selection */
 }
