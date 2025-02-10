@@ -20,19 +20,19 @@ function SidebarColor() {
         <div className={styles.sidebarColor}>
             
             <div className={styles.header} onClick={() => setIsOpen(!isOpen)}>
-                <h3>Color ({checkedColors ? `${checkedColors}` : ""})</h3>
+                <h3>Color {checkedColors ? `(${checkedColors})` : ""}</h3>
                 <div>
                     {isOpen ? <CaretDown size={20} /> : <CaretUp size={20} />}
                 </div>
             </div>
 
-            <div className={`${styles.colorContainer}  ${isOpen ? styles.open : styles.closed}`}>
+            <div className={`${styles.colorContainer}  ${isOpen ? styles.open : ""}`}>
                 {filters.colors.map((color, index) => (
                     <div key={index} className={`${styles.colorBox} ${color.isChecked ? styles.checked : ""}`} onClick={() => handleColorClick(index)}>
                         <div className={`${styles.colorIcon} ${styles[color.name]}`}>
                             {color.isChecked ? <Check size={15} fill="white" weight="bold"/> : ""}
                         </div>
-                        <p>{color.name}</p>
+                        <p className={styles.p}>{color.name}</p>
                     </div>
                 ))}
             </div>

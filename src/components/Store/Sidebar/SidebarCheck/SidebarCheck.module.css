@@ -1,0 +1,76 @@
+.sidebarCheck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    width: 100%;
+    margin: 15px;
+}
+
+.checkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    height: 0;  
+    overflow: hidden;
+    width: 100%;
+    transition: height 0.3s ease-in-out;
+}
+
+.checkBox {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+    padding: 10px;
+    user-select: none;
+}
+
+.checkBox:hover {
+    background-color: #e5e5e5;
+}
+
+.tickBox {
+    width: 23px;
+    height: 23px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticked {
+    animation: scaleUpDown 0.5s ease;
+    background-color: black;
+}
+
+@keyframes scaleUpDown {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.p {
+    font-size: 14px;
+    margin-left: 10px;
+}
