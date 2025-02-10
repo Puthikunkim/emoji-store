@@ -1,13 +1,16 @@
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
+import { ShopProvider } from './context'
 import { Outlet } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      <Outlet />
+      <ShopProvider>
+        <Navbar />
+        <Outlet />
+      </ShopProvider>
     </>
   )
 }

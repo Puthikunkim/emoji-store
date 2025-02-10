@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { CaretDown, CaretUp, Check } from "@phosphor-icons/react";
-import { filters } from "../../../../data/filters";
+import ShopContext from "../../../../context";
 import styles from "./SidebarColor.module.css";
 
 function SidebarColor() {
     const [isOpen, setIsOpen] = useState(true);
 
+    const { filters, setFilters } = useContext(ShopContext);
+
     const handleColorClick = (index) => {
-        updatedColors = [...filters.colors];
+        const updatedColors = [...filters.colors];
         updatedColors[index].isChecked = !filters.colors[index].isChecked;
+        setFilters({ ...filters, colors: updatedColors });
     }
 
     const checkedColors = filters.colors.filter((color) => color.isChecked).length;
