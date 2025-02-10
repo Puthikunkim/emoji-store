@@ -1,0 +1,91 @@
+.sidebarColor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    width: 15%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.colorContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 90px);
+    margin-top: 10px;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    width: 100%;
+}
+
+.open {
+    height: 260px;
+}
+
+.colorBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.colorBox:hover {
+    background-color: #e5e5e5;
+}
+
+.colorIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* Colors */
+.Black {
+    background-color: black;
+}
+.Red {
+    background-color: red;
+}
+.Blue {
+    background-color: blue;
+}
+.Green {
+    background-color: green;
+}
+.Yellow {
+    background-color: yellow;
+}
+.Purple {
+    background-color: purple;
+}
+.Orange {
+    background-color: orange;
+}
+.Brown {
+    background-color: brown;
+}
