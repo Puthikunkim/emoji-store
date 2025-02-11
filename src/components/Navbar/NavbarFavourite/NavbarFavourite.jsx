@@ -4,11 +4,10 @@ import ShopContext from "../../../context";
 import styles from "./NavbarFavourite.module.css";
 
 function NavbarFavourite() {
-  const [isFavorited, setIsFavorited] = useState(false);
-  const { fruits } = useContext(ShopContext);
+  const { fruits, favouritePage, setFavouritePage } = useContext(ShopContext);
 
   const toggleFavorite = () => {
-    setIsFavorited(!isFavorited);
+    setFavouritePage(!favouritePage);
   };
 
   const favouriteCount = fruits.filter((fruit) => fruit.isFavourited).length;
@@ -18,7 +17,7 @@ function NavbarFavourite() {
       {/* Heart Icon */}
       <HeartStraight
         size={40}
-        weight={isFavorited ? "fill" : "regular"}
+        weight={favouritePage ? "fill" : "regular"}
       />
 
       {/* Counter Number */}

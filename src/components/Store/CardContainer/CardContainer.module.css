@@ -9,7 +9,19 @@
 }
 
 .header {
+    display: flex;
+    flex-direction: row;
     margin: 15px;
+}
+
+.favourites {
+    margin-left: 10px;
+    color: #a3a3a3;
+    opacity: 0;
+}
+
+.active {
+    opacity: 1;
 }
 
 .body {
@@ -18,4 +30,9 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     width: 100%;
+}
+
+.empty {
+    color: #a3a3a3;
+    padding-left: 15px;
 }

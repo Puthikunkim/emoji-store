@@ -38,6 +38,10 @@
     opacity: 1; 
 }
 
+.favourited {
+    opacity: 1;
+}
+
 .bottom {
     display: flex;
     flex-direction: row;

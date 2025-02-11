@@ -7,9 +7,10 @@ const ShopContext = createContext();
 export const ShopProvider = ({ children }) => {
     const [filters, setFilters] = useState(defaultFilters);
     const [fruits, setFruits] = useState(defaultFruits);
+    const [favouritePage, setFavouritePage] = useState(false);
 
     return (
-        <ShopContext.Provider value={{ filters, setFilters, fruits, setFruits }}>
+        <ShopContext.Provider value={{ filters, setFilters, fruits, setFruits, favouritePage, setFavouritePage }}>
             {children}
         </ShopContext.Provider>
     );

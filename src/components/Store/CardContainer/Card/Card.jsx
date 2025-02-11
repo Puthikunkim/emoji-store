@@ -23,7 +23,7 @@ function Card({ product }) {
     return (
         <div className={styles.card}>
             <img src={img} alt="" />
-            <div className={styles.favourite} onClick={() => toggleFavourite()}>
+            <div className={`${styles.favourite} ${isFavourited ? styles.favourited : ""}`} onClick={() => toggleFavourite()}>
                 <HeartStraight size={22} weight={isFavourited ? "fill" : "regular"} color={isFavourited ? "red" : "black"}/>
             </div>
             <div className={styles.bottom}>
