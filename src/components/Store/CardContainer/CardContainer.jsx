@@ -1,12 +1,13 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
+import FilterFunctionality from "./FilterFunctionality/FilterFunctionality";
 import ShopContext from "../../../context";
 import styles from "./CardContainer.module.css";
 import Card from "./Card/Card";
 
 function CardContainer() {
-  const { fruits, favouritePage } = useContext(ShopContext);
+  const { favouritePage } = useContext(ShopContext);
 
-  const fruitsToDisplay = favouritePage ? fruits.filter((fruit) => fruit.isFavourited) : fruits;
+  const fruitsToDisplay = FilterFunctionality();
   const fruitsToDisplayCount = fruitsToDisplay.length;
 
   return (
