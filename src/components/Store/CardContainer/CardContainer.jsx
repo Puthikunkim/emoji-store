@@ -5,11 +5,16 @@ import Card from "./Card/Card";
 
 function CardContainer() {
     const { fruits, setFruits } = useContext(ShopContext);
+
+
     return (
         <div className={styles.cardContainer}>
-            <Card product={fruits[0]}/>
-            <Card product={fruits[1]}/>
-            <Card product={fruits[2]}/>
+            <div className={styles.header}><h3>Items</h3></div>
+            <div className={styles.body}>
+                {fruits.map((fruit, index) => (
+                    <Card key={index} product={fruit} />
+                ))}
+            </div>
         </div>
     )
 }
