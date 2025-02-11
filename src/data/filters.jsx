@@ -9,7 +9,7 @@ export const filters = {
         { name: 'Orange', isChecked: false },
         { name: 'Brown', isChecked: false }
     ],
-    families : [
+    Family : [
         { name: "Rose", isChecked: false },
         { name: "Citrus", isChecked: false },
         { name: "Nightshade", isChecked: false },
@@ -20,7 +20,7 @@ export const filters = {
         { name: "Laurel", isChecked: false },
         { name: "Other", isChecked: false },
     ],
-    vitamins : [
+    Vitamins : [
         { name: 'Vitamin C', isChecked: false },
         { name: 'Vitamin A', isChecked: false },
         { name: 'Vitamin K', isChecked: false },

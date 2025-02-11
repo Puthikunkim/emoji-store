@@ -6,8 +6,8 @@ function Sidebar() {
   return (
     <div className={styles.sidebar}>
       <SidebarColor />
-      <SidebarCheck category="families"/>
-      <SidebarCheck category="vitamins"/>
+      <SidebarCheck category="Family"/>
+      <SidebarCheck category="Vitamins"/>
     </div>
   );
 }
