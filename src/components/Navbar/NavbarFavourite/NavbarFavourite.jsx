@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { HeartStraight } from "@phosphor-icons/react";
+import ShopContext from "../../../context";
 import styles from "./NavbarFavourite.module.css";
 
 function NavbarFavourite() {
   const [isFavorited, setIsFavorited] = useState(false);
-  const count = 2;
+  const { fruits } = useContext(ShopContext);
 
   const toggleFavorite = () => {
     setIsFavorited(!isFavorited);
   };
+
+  const favouriteCount = fruits.filter((fruit) => fruit.isFavourited).length;
 
   return (
     <div className={styles.heartContainer} onClick={toggleFavorite}>
@@ -19,7 +22,7 @@ function NavbarFavourite() {
       />
 
       {/* Counter Number */}
-      <span className={styles.heartNumber}>{count}</span>
+      <span className={styles.heartNumber}>{favouriteCount}</span>
     </div>
   );
 }

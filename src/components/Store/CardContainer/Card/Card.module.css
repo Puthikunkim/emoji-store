@@ -25,8 +25,8 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
-    display: none;
-    transition: transform 0.3s ease-in-out;
+    opacity: 0; 
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .favourite:hover {
@@ -34,7 +34,7 @@
 }
 
 .card:hover .favourite {
-    display: block;
+    opacity: 1; 
 }
 
 .bottom {
@@ -63,7 +63,7 @@
     height: 100%;
     margin-right: 10px;
     margin-bottom: 30px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     transform-origin: bottom;
 }
 
