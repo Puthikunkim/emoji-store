@@ -2,33 +2,52 @@ import { useContext } from "react";
 import ShopContext from "../../../../context";
 
 function FilterFunctionality() {
-  const { fruits, filters, favouritePage } = useContext(ShopContext);
+  const { fruits, filters, favouritePage, query } = useContext(ShopContext);
 
-  // Filter fruits based on whether the user is on the favourite page
+  // 1. Filter fruits based on whether the user is on the favourite page
   const fruitsToDisplay = favouritePage ? fruits.filter((fruit) => fruit.isFavourited) : fruits;
 
-  // Get active Family filters (fruit.family is a string)
+  // 2. Get active filters (fruit.family is a string)
   const activeFamilyFilters = filters.Family.filter((family) => family.isChecked);
-  
-  // Get active color filters from filters.colors (returning an array of names)
   const activeColorFilters = filters.colors.filter((color) => color.isChecked).map((color) => color.name);
-
-  // Get active vitamin filters from filters.Vitamins (returning an array of names)
   const activeVitaminFilters = filters.Vitamins.filter((vitamin) => vitamin.isChecked).map((vitamin) => vitamin.name);
 
-  // Combine all filter conditions
-  const finalFilteredFruits = fruitsToDisplay.filter((fruit) => {
-    // Family match: if no family filter is active, it's a match; otherwise, the fruit's family must equal one of the active family filter names.
-    const familyMatch = activeFamilyFilters.length === 0 || activeFamilyFilters.some((filter) => filter.name === fruit.family);
+  // 3. Apply filter conditions for family, color, and vitamins
+  let finalFilteredFruits = fruitsToDisplay.filter((fruit) => {
+    // Family: If no family filter is active, it passes. Otherwise, fruit.family must match one active filter.
+    const familyMatchFilter = activeFamilyFilters.length === 0 || activeFamilyFilters.some((filter) => filter.name === fruit.family);
 
-    // Color match: if no color filter is active, it's a match; otherwise, every active color filter must be present in fruit.category.
-    const colorMatch = activeColorFilters.length === 0 || activeColorFilters.every((color) => fruit.category.includes(color));
+    // Color: If no color filter is active, it passes. Otherwise, every active color must be in fruit.category.
+    const colorMatchFilter = activeColorFilters.length === 0 || activeColorFilters.every((color) => fruit.category.includes(color));
 
-    // Vitamin match: if no vitamin filter is active, it's a match; otherwise, every active vitamin filter must be present in fruit.category.
-    const vitaminMatch = activeVitaminFilters.length === 0 || activeVitaminFilters.every((vitamin) => fruit.category.includes(vitamin));
+    // Vitamin: If no vitamin filter is active, it passes. Otherwise, every active vitamin must be in fruit.category.
+    const vitaminMatchFilter = activeVitaminFilters.length === 0 || activeVitaminFilters.every((vitamin) => fruit.category.includes(vitamin));
 
-    return familyMatch && colorMatch && vitaminMatch;
+    return familyMatchFilter && colorMatchFilter && vitaminMatchFilter;
   });
+
+  // 4. Define a helper to clean strings (only letters in lowercase)
+  const cleanString = (str) => str.replace(/[^a-zA-Z]/g, "").toLowerCase();
+
+  // Clean the query string
+  const cleanedQuery = cleanString(query);
+
+  // 5. If a search query exists, further filter the fruits
+  if (cleanedQuery) {
+    finalFilteredFruits = finalFilteredFruits.filter((fruit) => {
+      // Check if the cleaned fruit name includes the query
+      const nameMatch = cleanString(fruit.name).includes(cleanedQuery);
+
+      // Check if the cleaned fruit family includes the query
+      const familyMatchSearch = cleanString(fruit.family).includes(cleanedQuery);
+
+      // Check if any vitamin in fruit.category (i.e. any element containing "vitamin")
+      // includes the query.
+      const vitaminMatchSearch = fruit.category.filter((cat) => cat.toLowerCase().includes("vitamin")).some((vit) => cleanString(vit).includes(cleanedQuery));
+
+      return nameMatch || familyMatchSearch || vitaminMatchSearch;
+    });
+  }
 
   return finalFilteredFruits;
 }
