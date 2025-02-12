@@ -3,6 +3,7 @@ import App from './App.jsx'
 import Home from './components/Home/Home.jsx'
 import Store from './components/Store/Store.jsx'
 import FruitPage from './components/FruitPage/FruitPage.jsx'
+import Bag from './components/Bag/Bag.jsx'
 
 const routes = [
     {
@@ -13,7 +14,8 @@ const routes = [
             { index: true, element: <Home /> },
             { path: 'home', element: <Home /> },
             { path: 'store', element: <Store /> },
-            { path: 'store/:name', element: <FruitPage /> }
+            { path: 'store/:name', element: <FruitPage /> },
+            { path: 'bag', element: <Bag /> }
         ],
 
     },

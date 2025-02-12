@@ -8,6 +8,16 @@
 
 .top {
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.top:hover {
+    background-color: #d4d4d4;
 }
 
 .fruitPage h1 {

@@ -1,27 +1,26 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
+import { Link, useLocation } from "react-router-dom";
 import ShopContext from "../../../context";
 import { BagSimple } from "@phosphor-icons/react";
 import styles from "./NavbarBag.module.css";
 
 function NavbarBag() {
-  const [isClicked, setIsClicked] = useState(false);
-  const { fruits } = useContext(ShopContext);
+    const { fruits } = useContext(ShopContext);
+    const location = useLocation();
 
-  const toggleBag = () => {
-    setIsClicked(!isClicked);
-  };
+    const bagCount = fruits.filter((fruit) => fruit.quantity).length;
 
-  const bagCount = fruits.filter((fruit) => fruit.quantity).length;
+    return (
+        <Link to="/bag">
+            <div className={styles.bagContainer}>
+            {/* Bag Icon */}
+            <BagSimple size={40} weight={location.pathname === "/bag" ? "fill" : "regular"} />
 
-  return (
-    <div className={styles.bagContainer} onClick={toggleBag}>
-      {/* Bag Icon */}
-      <BagSimple size={40} weight={isClicked ? "fill" : "regular"} />
-
-      {/* Counter Number */}
-      <span className={styles.bagNumber}>{bagCount}</span>
-    </div>
-  );
+            {/* Counter Number */}
+            <span className={styles.bagNumber}>{bagCount}</span>
+            </div>
+        </Link>
+    );
 }
 
 export default NavbarBag;
