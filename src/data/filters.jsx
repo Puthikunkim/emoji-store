@@ -1,9 +1,9 @@
 export const filters = {
     colors : [
-        { name: 'Black', isChecked: true },
+        { name: 'Black', isChecked: false },
         { name: 'Red', isChecked: false },
         { name: 'Blue', isChecked: false },
-        { name: 'Green', isChecked: true },
+        { name: 'Green', isChecked: false },
         { name: 'Yellow', isChecked: false },
         { name: 'Purple', isChecked: false },
         { name: 'Orange', isChecked: false },

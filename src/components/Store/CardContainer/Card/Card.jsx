@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import { Link } from 'react-router-dom';
 import styles from "./Card.module.css";
 import ShopContext from "../../../../context";
 import { HeartStraight, BagSimple } from "@phosphor-icons/react";
@@ -21,22 +22,24 @@ function Card({ product }) {
     
     
     return (
-        <div className={styles.card}>
-            <img src={img} alt="" />
-            <div className={`${styles.favourite} ${isFavourited ? styles.favourited : ""}`} onClick={() => toggleFavourite()}>
-                <HeartStraight size={22} weight={isFavourited ? "fill" : "regular"} color={isFavourited ? "red" : "black"}/>
-            </div>
-            <div className={styles.bottom}>
-                <div className={styles.text}>
-                    <h5>{name}</h5>
-                    <p style={{color: "#a3a3a3"}}>{family}</p>
-                    <p>${price}</p>
+        <Link to={`/store/${encodeURIComponent(name.toLowerCase())}`}>
+            <div className={styles.card}>
+                <img src={img} alt="" />
+                <div className={`${styles.favourite} ${isFavourited ? styles.favourited : ""}`} onClick={() => toggleFavourite()}>
+                    <HeartStraight size={22} weight={isFavourited ? "fill" : "regular"} color={isFavourited ? "red" : "black"}/>
                 </div>
-                <div className={styles.bag} onClick={() => toggleCart()}>
-                    <BagSimple size={26} weight={quantity ? "fill" : "regular"}/>
+                <div className={styles.bottom}>
+                    <div className={styles.text}>
+                        <h5>{name}</h5>
+                        <p style={{color: "#a3a3a3"}}>{family}</p>
+                        <p>${price}</p>
+                    </div>
+                    <div className={styles.bag} onClick={() => toggleCart()}>
+                        <BagSimple size={26} weight={quantity ? "fill" : "regular"}/>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

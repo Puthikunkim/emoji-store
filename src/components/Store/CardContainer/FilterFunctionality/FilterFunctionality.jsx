@@ -41,9 +41,9 @@ function FilterFunctionality() {
       // Check if the cleaned fruit family includes the query
       const familyMatchSearch = cleanString(fruit.family).includes(cleanedQuery);
 
-      // Check if any vitamin in fruit.category (i.e. any element containing "vitamin")
+      // Check if any vitamin or color in fruit.category 
       // includes the query.
-      const vitaminMatchSearch = fruit.category.filter((cat) => cat.toLowerCase().includes("vitamin")).some((vit) => cleanString(vit).includes(cleanedQuery));
+      const vitaminMatchSearch = fruit.category.some((cat) => cleanString(cat).includes(cleanedQuery));
 
       return nameMatch || familyMatchSearch || vitaminMatchSearch;
     });
