@@ -1,0 +1,119 @@
+.fruitPage {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    padding: 0px 50px;
+}
+
+.fruitPage h1 {
+    font-size: 40px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 245, 245, 1);
+    width: 450px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.imgContainer img {
+    width: 100px;
+    height: auto;
+}
+
+.category {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.category p {
+    border: #e5e5e5 1px solid;
+    padding: 5px 10px;
+    border-radius: 13px;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.family {
+    color: #525252;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stock {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.stock p {
+    color: #007BFF;
+    font-size: 14px;
+}
+
+.quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.quantity button {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons button {
+    width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.buyNowButton {
+    background-color: #007BFF;  
+    padding: 15px 20px;
+    color: white;             
+    border: none;
+}
+
+.bagButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    border: 1px solid #e5e5e5;
+    background-color: transparent;
+}
