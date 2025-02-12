@@ -6,6 +6,10 @@
     padding: 0px 50px;
 }
 
+.top {
+    cursor: pointer;
+}
+
 .fruitPage h1 {
     font-size: 40px;
 }
@@ -26,11 +30,34 @@
     width: 450px;
     height: 450px;
     border-radius: 10px;
+    position: relative;
 }
 
 .imgContainer img {
     width: 100px;
     height: auto;
+}
+
+.favourite {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    user-select: none;
+}
+
+.favourite:hover {
+    transform: scale(1.2);
+}
+
+.imgContainer:hover .favourite {
+    opacity: 1;
+}
+
+.favourited {
+    opacity: 1;
 }
 
 .category {
