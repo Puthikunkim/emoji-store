@@ -34,7 +34,7 @@ export const fruits = [
         category: ['Green', 'Brown', 'Vitamin E', 'Vitamin K'],
         family: 'Laurel',
         isFavourited: false,
-        quantity: 0,
+        quantity: 3,
     },
     {
         id: 1,

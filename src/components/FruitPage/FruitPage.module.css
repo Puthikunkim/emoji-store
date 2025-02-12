@@ -119,9 +119,14 @@
     width: 25px;
     height: 25px;
     border-radius: 4px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #d4d4d4;
+    color: #a3a3a3;
     background-color: transparent;
     cursor: pointer;
+}
+
+.quantity button:hover {
+    background-color: #d4d4d4;
 }
 
 .buttons {

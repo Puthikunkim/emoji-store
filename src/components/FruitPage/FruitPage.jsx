@@ -3,7 +3,6 @@ import { useState, useContext } from 'react';
 import { BagSimple, ArrowLeft, HeartStraight } from "@phosphor-icons/react";
 import ShopContext from '../../context';
 import styles from './FruitPage.module.css';
-import box from '../../assets/icons/box.svg';
 
 function FruitPage() {
     const { name } = useParams(); // get the name from the URL

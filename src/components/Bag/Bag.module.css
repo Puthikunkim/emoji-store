@@ -1,0 +1,27 @@
+.bag {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    padding: 0px 50px;
+}
+
+.top {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.top:hover {
+    background-color: #d4d4d4;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
