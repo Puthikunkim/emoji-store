@@ -1,0 +1,51 @@
+.summary {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    border: 1px solid #d4d4d4;
+    border-radius: 8px;
+    width: 400px;
+    gap: 20px;
+}
+
+.title {
+    font-size: 18px;
+}
+
+.totalPrice {
+    font-size: 24px;
+}
+
+.subtotal,
+.shipping,
+.total {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+}
+
+.divider {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: #d4d4d4;
+    margin: 20px 0;
+}
+
+.checkout {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 17px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout:hover {
+    background-color: #0056b3;
+}

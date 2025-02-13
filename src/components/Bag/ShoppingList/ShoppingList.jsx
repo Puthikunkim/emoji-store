@@ -24,6 +24,7 @@ function ShoppingList() {
     return (
         <div className={styles.shoppingList}>
             <h3>Shopping Bag</h3>
+            {fruitsToDisplay.length === 0 && <p style={{ color: '#a3a3a3' }}>Bag is empty</p>}
             {fruitsToDisplay.map((fruit, index) => (
                 <div className={styles.fruitCard} key={index}>
                     <div className={styles.imgContainer}>
