@@ -9,7 +9,7 @@ function FruitPage() {
     const navigate = useNavigate();
     const { fruits, setFruits } = useContext(ShopContext);
     const fruit = fruits.find((fruit) => fruit.name.toLowerCase() === name);
-    const [bagQuantity, setBagQuantity] = useState(1);
+    const [bagQuantity, setBagQuantity] = useState(fruit.quantity ? fruit.quantity : 1);
 
     if (!fruit) {
         return <h1>404 - Fruit not found</h1>
@@ -25,6 +25,13 @@ function FruitPage() {
         if (bagQuantity > 1) {
             setBagQuantity(bagQuantity - 1);
         }
+    }
+
+    const buyNow = () => {
+        const updatedFruits = [...fruits];
+        updatedFruits[fruit.id].quantity = bagQuantity;
+        setFruits(updatedFruits);
+        navigate("/bag");
     }
 
     const toggleBag = () => {
@@ -67,7 +74,7 @@ function FruitPage() {
                     </div>
                     <p>{fruit.description}</p>
                     <div className={styles.buttons}>
-                        <button className={styles.buyNowButton}>Buy Now</button>
+                        <button className={styles.buyNowButton} onClick={() => buyNow()}>Buy Now</button>
                         <button className={styles.bagButton} onClick={() => toggleBag()}><BagSimple size={25}/>{!fruit.quantity ? "Add to Bag" : "Remove from Bag"}</button>
                     </div>
                 </div>
