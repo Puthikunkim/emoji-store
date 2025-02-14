@@ -1,6 +1,7 @@
 import styles from "./ShoppingList.module.css";
 import { Trash } from "@phosphor-icons/react";
 import { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import ShopContext from '../../../context';
 
 function ShoppingList() {
@@ -27,9 +28,11 @@ function ShoppingList() {
             {fruitsToDisplay.length === 0 && <p style={{ color: '#a3a3a3' }}>Bag is empty</p>}
             {fruitsToDisplay.map((fruit, index) => (
                 <div className={styles.fruitCard} key={index}>
-                    <div className={styles.imgContainer}>
-                        <img src={fruit.img} alt={fruit.name} />
-                    </div>
+                    <Link to={`/store/${encodeURIComponent(fruit.name.toLowerCase())}`}>
+                        <div className={styles.imgContainer}>
+                            <img src={fruit.img} alt={fruit.name} />
+                        </div>
+                    </Link>
                     <div className={styles.stockInfo}>
                         <div className={styles.stockInfoLeft}>
                             <div className={styles.fruitInfo}>
