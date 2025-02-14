@@ -10,3 +10,9 @@ a {
     text-decoration: none;
     color: black;
 }
+
+@media (max-width: 880px) {
+    .navSpacer {
+        height: 100px;
+    }
+}

@@ -41,11 +41,25 @@
     display: none;
 }
 
-
-
 .logo {
     font-size: 25px;
     font-weight: 400;
     letter-spacing: -2px;
     margin-right: 20px;
+}
+
+@media (max-width: 880px) {
+    .navbarLink {
+        gap: 20px;
+        margin-left: 40px;
+    }
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbarLink {
+        display: none;
+    }
 }

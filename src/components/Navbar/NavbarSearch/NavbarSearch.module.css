@@ -38,3 +38,17 @@
 .searchContainer:hover .searchInput::placeholder {
     color: #7a7a7a; 
 }
+
+@media (max-width: 880px) {
+    .searchContainer {
+        width: 200px;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .searchContainer {
+        width: 150px;
+    }
+    
+}

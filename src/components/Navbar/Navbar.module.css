@@ -14,4 +14,18 @@ nav {
     display: flex;
     align-items: center;
     gap: 20px;
+    padding: 0px 30px;
 }
+
+@media (max-width: 880px) {
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;           /* Ensure it stays on top */
+        background: white;      
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        width: 100%;
+    }
+}
+  

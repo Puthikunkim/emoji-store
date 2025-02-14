@@ -36,3 +36,24 @@
     color: #a3a3a3;
     padding-left: 15px;
 }
+
+@media (max-width: 880px) {
+    .cardContainer {
+        padding: 0px 20px;
+    }
+    .body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .empty {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .empty {
+        padding-left: 15px;
+    }
+}

@@ -9,6 +9,7 @@ function App() {
     <>
       <ShopProvider>
         <Navbar />
+        <div className='navSpacer'/>
         <Outlet />
       </ShopProvider>
     </>
