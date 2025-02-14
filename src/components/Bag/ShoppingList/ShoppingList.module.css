@@ -4,6 +4,13 @@
     gap: 30px;
 }
 
+@media (max-width: 1220px) {
+    .shoppingList {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
 .fruitCard {
     display: flex;
     flex-direction: row;
@@ -34,6 +41,13 @@
     justify-content: start;
     gap: 60px;
     align-items: center;
+}
+
+@media (max-width: 700px) {
+    .stockInfoLeft {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 .fruitInfo {
@@ -88,6 +102,14 @@
     justify-content: end;
     gap: 50px;
     align-items: center;
+}
+
+@media (max-width: 700px) {
+    .stockInfoRight {
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
 }
 
 .trash {

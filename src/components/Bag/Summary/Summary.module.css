@@ -8,6 +8,14 @@
     gap: 20px;
 }
 
+@media (max-width: 1220px) {
+    .summary {
+        width: 100%;
+        padding: 60px;
+        margin: 0 80px;
+    }
+}
+
 .title {
     font-size: 18px;
 }

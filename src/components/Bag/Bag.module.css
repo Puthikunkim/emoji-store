@@ -6,6 +6,12 @@
     padding: 0px 50px;
 }
 
+@media (max-width: 400px) {
+    .bag {
+        padding: 0px 10px;
+    }
+}
+
 .top {
     cursor: pointer;
     display: flex;
@@ -26,4 +32,13 @@
     margin-top: 10px;
     justify-content: space-between;
     width: 100%;
+}
+
+@media (max-width: 1220px) {
+    .bottom {
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
 }
