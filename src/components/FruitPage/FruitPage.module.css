@@ -14,6 +14,7 @@
     border-radius: 8px;
     padding: 5px;
     transition: background-color 0.2s ease-in-out;
+    margin-top: 20px;
 }
 
 .top:hover {
