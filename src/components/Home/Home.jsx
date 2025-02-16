@@ -18,7 +18,7 @@ function Home() {
             </div>
         </div>
         <div className={styles.middle}>
-            <h2>Best seller</h2>
+            <h2>Best sellers</h2>
             <div className={styles.cardContainer}>
                 <Card product={fruits[0]}/>
                 <Card product={fruits[1]}/>
