@@ -3,6 +3,65 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
-    gap: 80px;
+    z-index: 0;
+    height: calc(100vh - 89px); /* 89px is the height of the navbar so calculate and subtract to get rid of scrollbar at the bottom */
 }
+
+/* Container for the hero image */
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+}
+  
+/* Make the image fill the container */
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay (pseudo-element) */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* same as top:0, right:0, bottom:0, left:0 */
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust darkness here */
+    z-index: 1; /* Ensure overlay is above the image but below text */
+}
+  
+/* Text overlay */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* Above the dark overlay */
+    width: 700px;
+    text-align: right;
+    font-size: 35px;
+}
+
+.hero button {
+    width: 300px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: white;  
+    padding: 20px 20px;
+    color: black;             
+    border: none;
+    margin-top: 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.hero button:hover {
+    background-color: #b0b0b0;
+}
+
