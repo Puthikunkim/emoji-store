@@ -126,7 +126,9 @@
 .stock {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
 }
 
 .stock p {

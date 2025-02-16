@@ -1,5 +1,5 @@
 import styles from "./ShoppingList.module.css";
-import { Trash } from "@phosphor-icons/react";
+import { Trash, Package } from "@phosphor-icons/react";
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import ShopContext from '../../../context';
@@ -38,7 +38,10 @@ function ShoppingList() {
                             <div className={styles.fruitInfo}>
                                 <h4>{fruit.name}</h4>
                                 <p className={styles.family}>{fruit.family} Family</p>
-                                <p className={styles.stockText}>In Stock</p>
+                                <div className={styles.stock}>
+                                    <Package size={20} color='#007BFF'/>
+                                    <p>In Stock</p>
+                                </div>
                                 <p className={styles.quantityText}>Qty: {fruit.quantity}</p>
                             </div>
                             <div className={styles.quantity}>

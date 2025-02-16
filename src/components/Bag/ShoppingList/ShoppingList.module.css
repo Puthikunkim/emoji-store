@@ -63,6 +63,19 @@
     color: #525252;        
 }
 
+.stock {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.stock p {
+    color: #007BFF;
+    font-size: 14px;
+}
+
 .stockText {
     font-size: 14px;    
     color: #3895ff;        
@@ -111,6 +124,7 @@
         gap: 30px;
     }
 }
+
 
 .trash {
     display: flex;

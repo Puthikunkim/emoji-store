@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useContext } from 'react';
-import { BagSimple, ArrowLeft, HeartStraight } from "@phosphor-icons/react";
+import { BagSimple, ArrowLeft, HeartStraight, Package } from "@phosphor-icons/react";
 import ShopContext from '../../context';
 import styles from './FruitPage.module.css';
 
@@ -63,7 +63,7 @@ function FruitPage() {
                     <h1>{fruit.name}</h1>
                     <p className={styles.family}>{fruit.family} Family</p>
                     <div className={styles.stock}>
-                        <img src="" alt="" />
+                        <Package size={20} color='#007BFF'/>
                         <p>In Stock</p>
                     </div>
                     <h3>${fruit.price}</h3>
