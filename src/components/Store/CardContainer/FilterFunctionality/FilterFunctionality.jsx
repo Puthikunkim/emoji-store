@@ -49,7 +49,7 @@ function FilterFunctionality() {
     });
   }
 
-  return finalFilteredFruits;
+  return {finalFilteredFruits, activeFamilyFilters, activeColorFilters, activeVitaminFilters, cleanedQuery };
 }
 
 export default FilterFunctionality;

@@ -1,0 +1,25 @@
+/* Ensure the container for filters displays them in a row */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+  
+  /* Style each filter box */
+.filter {
+    display: flex;
+    width: fit-content;
+    gap: 5px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007BFF; 
+    color: white;         
+    padding: 5px 10px;
+    border-radius: 16px;    
+    font-size: 11px;
+    cursor: pointer;
+}
+  
