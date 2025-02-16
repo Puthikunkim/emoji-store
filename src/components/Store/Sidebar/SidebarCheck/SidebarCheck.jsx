@@ -28,7 +28,7 @@ function SidebarCheck({ category }) {
   };
 
   const filtersClicked = filters[category].filter((filter) => filter.isChecked).length;
-  const height = category === "Family" ? "380px" : "220px";
+  const height = category === "Family" ? "390px" : "220px";
 
   return (
     <div className={styles.sidebarCheck}>
