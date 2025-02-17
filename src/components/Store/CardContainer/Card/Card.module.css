@@ -9,6 +9,11 @@
     cursor: pointer;
     user-select: none;
     aspect-ratio: 3 / 4;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
 }
 
 .card img {
