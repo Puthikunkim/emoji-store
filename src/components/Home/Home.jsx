@@ -34,9 +34,7 @@ function Home() {
             <div className={styles.middleHeroContent}>
                 <h3>Emojis. Exclusive Deal</h3>
                 <p>
-                Discover the epitome of style with Eunoia Exclusives. Elevate your wardrobe 
-                with premium brands, where luxury meets fashion. Immerse yourself in a world 
-                of unparalleled elegance. Explore now!
+                Discover the ultimate collection of emojis at Eunoia Exclusives. Express yourself with vibrant designs, where creativity meets fun. Immerse yourself in a world of endless possibilities. Explore now!
                 </p>
                 <div className={styles.visitShop} onClick={() => navigate("/store")}>
                     <p>Visit Shop</p>
