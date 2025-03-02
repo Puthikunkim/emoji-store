@@ -47,5 +47,22 @@ Located in the `src` folder:
 - `routes.jsx`: React router configuration  
 - `main.jsx`: Entry point for the React app
 
+## Local Setup  
+To clone and run the project locally, follow these steps:
+
+```bash
+# Clone the repo
+git clone https://github.com/Puthikunkim/emoji-store.git
+
+# Navigate into the project directory
+cd emoji-store
+
+# Install dependencies
+npm install
+
+# Start the server
+npm run dev
+```
+
 ## Acknowledgements
 
