@@ -48,5 +48,4 @@ Located in the `src` folder:
 - `main.jsx`: Entry point for the React app
 
 ## Acknowledgements
-Thanks to all contributors and the open-source community for their support and resources.
 
