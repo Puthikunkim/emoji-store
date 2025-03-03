@@ -1,5 +1,5 @@
 # Emoji Store  
-- Emoji Store is a static e-commerce platform built with React. 
+- Emoji Store is an e-commerce platform built with React. 
 - It leverages React hooks such as Context, useEffect, and useState APIs to manage state and side effects. 
 - The site offers typical e-commerce functionalities, allowing users to explore products, search for items, view product details, add items to a cart or wish list, modify their cart, and proceed through a mock checkout process. Currently, the products featured are emojis representing fruits, complete with relevant filters.
 
